@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: disk-api
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+          fetch_size: 20
+        order_updates: true
+        order_inserts: true
+server:
+  error:
+    include-message: always
